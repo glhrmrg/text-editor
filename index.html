@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Task 01</title>
+</head>
+
+<body>
+    
+    <div class="container">
+        <div class="buttons">
+            
+            <button id="send" onclick="printText()">Enviar</button>
+            <button id="clear" onclick="removeText()">Excluir</button>
+            <input type="button" onclick="bold()" value="Bold">
+            <input type="button" onclick="italic()" value="Italic">
+            <input type="button" value="E">
+            <input type="button" value="D">
+            <input type="button" value="C">
+
+            <div class="bold"></div>
+            <div class="normal"></div>
+            <div class="italic"></div>
+            </div>
+
+            <textarea id="textarea" value=""></textarea>
+            <ul id="textList"></ul> 
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

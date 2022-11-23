@@ -19,6 +19,8 @@
 }
 
 body {
+    display: flex;
+    justify-content: center;
     background: var(--background);
     color: var(--textcolor);
 }
@@ -45,7 +47,6 @@ textarea:hover, textarea:focus {
 .input-buttons {
     margin: 10px;
 }
-
 
 ul {
     display: flex;

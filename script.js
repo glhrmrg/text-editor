@@ -1,8 +1,18 @@
 const field = document.querySelector('textarea');
 const clear = document.getElementById('clear');
-const send = document.querySelector('send');
+const bold = document.getElementById('bold');
+const italic = document.getElementById('italic');
+const right = document.getElementById('right');
+const left = document.getElementById('left');
+const center = document.getElementById('center');
+const html = document.querySelector('html');
+const darkmode = document.querySelector('#checkbox');
 
-function printText () {
+darkmode.addEventListener('change', function(){
+    html.classList.toggle('dark');
+});
+
+send.onclick = function printText () {
     let typedText = field.value;
     const list = document.createElement("li");
     const insertlist = document.createTextNode(typedText);
@@ -56,7 +66,12 @@ function printText () {
     document.getElementById("textList").appendChild(list);
 }
 
-function bold() {
+clear.onclick = function removeText () {
+    const remove = document.getElementById("textList")
+    remove.removeChild(remove.lastElementChild)
+}
+
+bold.onclick = function bold() {
     if (document.getElementById("textarea").style.fontWeight == "bold") {
         document.getElementById("textarea").style.fontWeight = "normal";
     }else {
@@ -64,7 +79,7 @@ function bold() {
     }
 }
 
-function italic() {
+italic.onclick = function italic() {
     if (document.getElementById("textarea").style.fontStyle == "italic") {
         document.getElementById("textarea").style.fontStyle = "normal";
     }else {
@@ -72,7 +87,7 @@ function italic() {
     }
 }
 
-function center() {
+center.onclick = function center() {
     if (document.getElementById("textarea").style.textAlign == "center") {
         document.getElementById("textarea").style.textAlign = "left";
     }else {
@@ -80,7 +95,7 @@ function center() {
     }
 }
 
-function right() {
+right.onclick = function right() {
     if (document.getElementById("textarea").style.textAlign == "right") {
         document.getElementById("textarea").style.textAlign = "left";
     }else {
@@ -88,7 +103,7 @@ function right() {
     }
 }
 
-function left() {
+left.onclick = function left() {
     if (document.getElementById("textarea").style.textAlign == "left") {
         document.getElementById("textarea").style.textAlign = "left";
     }else {
@@ -96,7 +111,4 @@ function left() {
     }
 }
 
-function removeText () {
-    const remove = document.getElementById("textList")
-    remove.removeChild(remove.lastElementChild)
-}
+

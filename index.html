@@ -12,20 +12,22 @@
 <body>
 
     <div class="main-container">
-        <div class="buttons">
+        <div class="input-buttons">
+            <input type="button" id="send" value="Enviar">
+            <input type="button" id="clear" value="Excluir">
+            <input type="button" id="bold" value="Bold">
+            <input type="button" id="italic" value="Italic">
+            <input type="button" id="left" value="Alinhar à esquerda">
+            <input type="button" id="center" value="Alinhar ao centro">
+            <input type="button" id="right" value="Alinhar à direita">
+            <input type="checkbox" name="checkbox" class="checkbox" id="checkbox">
+            <label for="checkbox" class="label">Modo escuro</label>
 
-            <button id="send" onclick="printText()">Enviar</button>
-            <button id="clear" onclick="removeText()">Excluir</button>
-            <input type="button" onclick="bold()" value="Bold">
-            <input type="button" onclick="italic()" value="Italic">
-            <input type="button" onclick="left()" value="Alinhar à esquerda">
-            <input type="button" onclick="center()" value="Alinhar ao centro">
-            <input type="button" onclick="right()" value="Alinhar à direita">
         </div>
-
         <textarea id="textarea" value=""></textarea>
-        <ul id="textList"></ul>
-    </div>
+        <div class="list-container">
+            <ul id="textList"></ul>
+        </div>
     </div>
 
     <script src="script.js"></script>

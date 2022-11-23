@@ -10,19 +10,18 @@
 </head>
 
 <body>
-
+    <div class="clicked"></div>
     <div class="main-container">
         <div class="input-buttons">
             <input type="button" id="send" value="Enviar">
             <input type="button" id="clear" value="Excluir">
-            <input type="button" id="bold" value="Bold" onclick="addStyle('bold')">
+            <input type="button" id="bold" value="Bold" onclick="addStyle('bold', 'clicked')">
             <input type="button" id="italic" value="Italic" onclick="addStyle('italic')">
-            <input type="button" id="left" value="Alinhar à esquerda" onclick="addStyle('left')">
-            <input type="button" id="center" value="Alinhar ao centro" onclick="addStyle('center')">
-            <input type="button" id="right" value="Alinhar à direita" onclick="addStyle('right')">>
+            <input type="button" id="left" value="Alinhar à esquerda" onclick="addStyle('leftText')">
+            <input type="button" id="center" value="Alinhar ao centro" onclick="addStyle('centerText')">
+            <input type="button" id="right" value="Alinhar à direita" onclick="addStyle('rightText')">
             <input type="checkbox" name="checkbox" class="checkbox" id="checkbox">
             <label for="checkbox" class="label">Modo escuro</label>
-
         </div>
         <div class="list-container">
         <textarea id="textarea" value=""></textarea>

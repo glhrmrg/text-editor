@@ -1,11 +1,19 @@
-.container {
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+textarea {
+    resize: none;
+    width: 50vh;
+    height: 20vh;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0.5px 2px 8px;
+}
+
+textarea:hover, textarea:focus {
+    outline: none;
+}
+
+.buttons {
+    margin: 10px;
+
 }
 
 ul {
@@ -27,20 +35,10 @@ ul {
     font-style: italic;
 }
 
-textarea {
-    resize: none;
-    width: 50vh;
-    height: 20vh;
-    border: none;
-    border-radius: 10px;
-    background-color: #b3b3b3;
-    box-shadow: 0.5px 2px 8px;
+.rightText {
+    text-align: right;
 }
 
-textarea:hover {
-    outline: none;
-}
-.buttons {
-    margin: 10px;
-
+.centerText {
+    text-align: center;
 }

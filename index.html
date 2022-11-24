@@ -10,24 +10,52 @@
 </head>
 
 <body>
-    <div class="clicked"></div>
     <div class="main-container">
         <div class="input-buttons">
-            <input type="button" id="send" value="Enviar">
-            <input type="button" id="clear" value="Excluir">
-            <input type="button" id="bold" value="Bold" onclick="addStyle('bold', 'clicked')">
-            <input type="button" id="italic" value="Italic" onclick="addStyle('italic')">
-            <input type="button" id="left" value="Alinhar à esquerda" onclick="addStyle('leftText')">
-            <input type="button" id="center" value="Alinhar ao centro" onclick="addStyle('centerText')">
-            <input type="button" id="right" value="Alinhar à direita" onclick="addStyle('rightText')">
-            <input type="checkbox" name="checkbox" class="checkbox" id="checkbox">
-            <label for="checkbox" class="label">Modo escuro</label>
+
+            <input type="checkbox" id="boldchk" onclick="addStyle('bold')">
+            <label for="boldchk" class="boldswitch">
+                <span class="boldslider">B</span>
+            </label>
+
+            <input type="checkbox" id="italicchk"  onclick="addStyle('italic')">
+            <label for="italicchk" class="italicswitch">
+                <span class="italicslider">I</span>
+            </label>
+
+            
+            <input type="checkbox" id="leftchk" name="switch" onclick="addStyle('leftText'); leftcheck()">
+            <label for="leftchk" class="leftswitch">
+                <span class="leftslider">L</span>
+            </label>
+
+            <input type="checkbox" id="centerchk" name="switch" onclick="addStyle('centerText'); centercheck()">
+            <label for="centerchk" class="centerswitch">
+                <span class="centerslider">C</span>
+            </label>
+
+            <input type="checkbox" id="rightchk" name="switch" onclick="addStyle('rightText'); rightcheck() ">
+            <label for="rightchk" class="rightswitch">
+                <span class="rightslider">R</span>
+            </label>
+
+            <input type="checkbox" name="darkmode" id="darkmode">
+            <label for="darkmode" class="darkswitch">
+                <span class="darkslider">D</span>
+            </label>
+
         </div>
+
         <div class="list-container">
-        <textarea id="textarea" value=""></textarea>
+            <textarea id="textarea" value=""></textarea>
+            <div class="sendRemoveBtn">
+                <input class="sendBtn" type="button" id="send" value="Enviar">
+                <input class="removeBtn" type="button" id="clear" value="Excluir">
+            </div>
+            
             <ul id="textList"></ul>
         </div>
-        </div>
+    </div>
     </div>
 
     <script src="script.js"></script>

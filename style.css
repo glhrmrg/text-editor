@@ -5,7 +5,7 @@
 }
 
 :root {
-    --background: #fcfcfc;
+    --background: #f8f8f8;
     --textareaBg: #fcfcfc;
     --check: #000b14;
     --textcolor: #000b14;
@@ -37,7 +37,7 @@ textarea {
     height: 20vh;
     border: none;
     border-radius: 5px;
-    box-shadow: 0.5px 1px 7px #665;
+    box-shadow: 0.5px 1px 7px #4a5862;
 }
 
 textarea:hover, textarea:focus {
@@ -46,6 +46,39 @@ textarea:hover, textarea:focus {
 
 .input-buttons {
     margin: 10px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.main-container {
+    margin: 20px;
+}
+
+.sendRemoveBtn {
+    display: flex;
+    justify-content: space-around;
+}
+
+.sendBtn, .removeBtn {
+    background-color: #274d67;
+    color: #f8f8f8;
+    width: 50px;
+    height: 25px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0.5px 2px 2px #665;
+    cursor: pointer;
+}
+
+.sendBtn:hover, .removeBtn:hover {
+    background-color: #437290;
+}
+
+.sendBtn:active, .removeBtn:active {
+    box-shadow: 0 2px #666;
+    transform: translateY(2px)
 }
 
 ul {
@@ -75,6 +108,45 @@ ul {
     text-align: center;
 }
 
-.clicked {
-    background-color: aqua;
+#boldchk, #italicchk, #leftchk, #rightchk, #centerchk, #darkmode {
+    display: none;
+}
+
+.boldswitch, .italicswitch, .leftswitch, .centerswitch, .rightswitch, .darkswitch {
+    display: flex;
+    width: 40px;
+    height: 20px;
+    background-color: #818181;
+    border-radius: 20px;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0.5px 1px 7px #665;;
+}
+
+.boldslider, .italicslider, .leftslider, .centerslider, .rightslider, .darkslider {
+    text-align: center;
+    background-color: #f8f8f8;
+    color: #000;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    transition: all .5s ease-in-out;
+}
+
+#boldchk:checked ~ .boldswitch, 
+#italicchk:checked ~ .italicswitch, 
+#leftchk:checked ~ .leftswitch, 
+#centerchk:checked ~ .centerswitch, 
+#rightchk:checked ~ .rightswitch,
+#darkmode:checked ~ .darkswitch {
+    background-color: #274d67;
+}
+
+#boldchk:checked ~ .boldswitch .boldslider, 
+#italicchk:checked ~ .italicswitch .italicslider, 
+#leftchk:checked ~ .leftswitch .leftslider, 
+#centerchk:checked ~ .centerswitch .centerslider, 
+#rightchk:checked ~ .rightswitch .rightslider,
+#darkmode:checked ~ .darkswitch .darkslider {
+    transform: translateX(19px);
 }

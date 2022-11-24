@@ -1,12 +1,9 @@
 const field = document.querySelector('textarea');
-const clear = document.getElementById('clear');
-const bold = document.getElementById('bold');
-const italic = document.getElementById('italic');
-const right = document.getElementById('right');
-const left = document.getElementById('left');
-const center = document.getElementById('center');
 const html = document.querySelector('html');
-const darkmode = document.querySelector('#checkbox');
+const darkmode = document.querySelector('#darkmode');
+var left = document.getElementById('leftchk');
+var right = document.getElementById('rightchk');
+var center = document.getElementById('centerchk');
 
 let styles = [];
 
@@ -68,3 +65,34 @@ function addStyle(style) {
         styles.push(style);
     }
 }
+
+function leftcheck() {
+    if (left.checked) {
+        center.disabled = true;
+        right.disabled = true;
+    } else {
+        center.disabled = false;
+        right.disabled = false;
+    }
+}
+
+function rightcheck() {
+    if (right.checked) {
+        center.disabled = true;
+        left.disabled = true;
+    } else {
+        center.disabled = false;
+        left.disabled = false;
+    }
+}
+
+function centercheck() {
+    if (center.checked) {
+        left.disabled = true;
+        right.disabled = true;
+    } else {
+        left.disabled = false;
+        right.disabled = false;
+    }
+}
+
